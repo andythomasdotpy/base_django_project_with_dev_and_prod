@@ -1,7 +1,8 @@
 from decouple import config
 
+settings = "dev"
 
-if config("SETTINGS-DEV-OR-PROD") == "prod":
+if settings == "prod":
     from .prod import *
 else:
     from .dev import *
